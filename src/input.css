@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vos styles personnalisés peuvent être ajoutés ici */
+@layer components {
+
+    /* Exemple de composant personnalisé */
+    .btn-primary {
+        @apply bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600;
+    }
+}

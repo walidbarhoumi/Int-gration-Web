@@ -1,0 +1,16 @@
+{
+    "scripts": {
+        "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+        "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+    },
+    "name": "integration-web",
+    "version": "1.0.0",
+    "main": "tailwind.config.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "tailwindcss": "^3.3.3"
+    }
+}
