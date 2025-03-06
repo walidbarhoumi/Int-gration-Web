@@ -2,9 +2,8 @@
 # LunchBox Pro - Projet IW
 
 ## Membres de l'équipe
-- Souheil - Intégration des pages Accueil et Produits
-- Ahmed - Page Contact et Footer
-- Fatima - Page Personnalisation et Header
+- Hamouda - Intégration des pages Accueil et Produits , detail produit,personaliser produit
+
 
 ## Instructions d'installation
 1. Cloner le dépôt :
