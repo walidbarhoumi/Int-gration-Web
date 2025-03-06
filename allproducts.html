@@ -3,6 +3,7 @@
 <head>
     <title>LunchBox Pro - Tous les produits</title>
     <link href="./dist/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="font-sans bg-gray-100">
 
@@ -13,30 +14,49 @@
 
     <!-- Header -->
     <header class="bg-white shadow">
-        <div class="container flex items-center justify-between p-4 mx-auto max-w-[1440px]">
+        <div class="container mx-auto flex justify-between items-center p-4 max-w-[1440px]">
             <div class="text-xl font-bold text-red-500">LunchBox Pro</div>
-            <nav class="space-x-4">
-                <a href="home.html" class="text-gray-700">Accueil</a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden space-x-4 md:flex">
+                <a href="home.html" class="text-gray-700 hover:text-red-500">Accueil</a>
                 <a href="allproducts.html" class="font-bold text-red-500">Produits</a>
-                <a href="personaliserproduit.html" class="text-gray-700">Personnaliser</a>
-                <a href="#" class="text-gray-700">Contact</a>
-                <a href="#" class="text-gray-700">Connexion</a>
+                <a href="personaliserproduit.html" class="text-gray-700 hover:text-red-500">Personnaliser</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Contact</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Connexion</a>
             </nav>
-            
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="text-2xl md:hidden">☰</button>
         </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="flex flex-col hidden p-4 space-y-2 bg-white md:hidden">
+            <a href="home.html" class="text-gray-700">Accueil</a>
+            <a href="allproducts.html" class="font-bold text-red-500">Produits</a>
+            <a href="personaliserproduit.html" class="text-gray-700">Personnaliser</a>
+            <a href="#" class="text-gray-700">Contact</a>
+            <a href="#" class="text-gray-700">Connexion</a>
+        </nav>
+
+        <script>
+            document.getElementById('menu-btn').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+        </script>
     </header>
 
     <!-- Hero Section -->
-    <section class="py-12 text-center bg-gradient-to-r from-pink-200 to-teal-200">
-        <h1 class="text-4xl font-bold text-gray-800">Notre Collection de Lunch Box Électriques</h1>
+    <section class="py-8 text-center md:py-12 bg-gradient-to-r from-pink-200 to-teal-200">
+        <h1 class="text-2xl font-bold text-gray-800 md:text-4xl">Notre Collection de Lunch Box Électriques</h1>
         <p class="mt-2 text-gray-600">Découvrez notre gamme innovante pour des repas toujours parfaitement chauffés</p>
     </section>
 
     <!-- Main Container -->
-    <div class="container mx-auto grid grid-cols-12 gap-6 max-w-[1440px] py-12 px-4">
+    <div class="container mx-auto max-w-[1440px] py-6 md:py-12 px-4 grid grid-cols-1 md:grid-cols-12 gap-6">
 
-        <!-- Sidebar Filter -->
-        <aside class="col-span-3 p-6 bg-white rounded-lg shadow">
+        <!-- Sidebar Filters (stacked on mobile) -->
+        <aside class="w-full p-4 bg-white rounded-lg shadow md:col-span-3 md:p-6">
             <h2 class="text-xl font-bold">Catégories</h2>
             <ul class="mt-4 space-y-2">
                 <li><input type="checkbox" class="mr-2">Standard</li>
@@ -56,11 +76,11 @@
         </aside>
 
         <!-- Product Grid -->
-        <section class="grid grid-cols-1 col-span-9 gap-6 md:grid-cols-3">
-            <!-- Product Card (with 6.jpg image) -->
+        <section class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:col-span-9">
+            <!-- Product Card 1 -->
             <div class="p-4 bg-white rounded-lg shadow">
-                <img src="./images/1.jpg" class="mb-4 rounded-lg" alt="Lunch Box">
-                <h3 class="text-lg font-bold">SmartLunch Mini</h3>
+                <img src="./images/1.jpg" class="object-cover w-full h-48 rounded-lg" alt="Lunch Box">
+                <h3 class="mt-4 text-lg font-bold">SmartLunch Mini</h3>
                 <p class="font-bold text-red-500">39.99 dt</p>
                 <p class="text-sm text-gray-600">Format compact idéal pour les petits appétits</p>
                 <div class="flex items-center justify-between mt-4">
@@ -68,34 +88,33 @@
                     <button class="px-4 py-2 text-white bg-red-500 rounded">Ajouter au panier</button>
                 </div>
             </div>
-            
-            <!-- Tu peux copier ce div pour ajouter plus de produits -->
+            <!-- Ajouter d'autres cartes produit ici -->
         </section>
 
     </div>
 
     <!-- Footer -->
-    <footer class="py-12 mt-12 text-white bg-gray-900">
-        <div class="grid max-w-6xl grid-cols-1 gap-8 mx-auto md:grid-cols-4">
+    <footer class="py-8 text-white bg-gray-900 md:py-12">
+        <div class="grid max-w-6xl grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-4">
             <div>
                 <h4 class="font-bold">À propos de nous</h4>
-                <p class="mt-2 text-sm">LunchBox Pro, votre spécialiste des solutions de repas nomades et innovants depuis 2020.</p>
+                <p class="mt-2 text-sm">LunchBox Pro, votre spécialiste des solutions de repas nomades.</p>
             </div>
             <div>
                 <h4 class="font-bold">Liens utiles</h4>
                 <ul class="mt-2 space-y-1 text-sm">
-                    <li><a href="#">Nos produits</a></li>
-                    <li><a href="#">Guide d'utilisation</a></li>
-                    <li><a href="#">Blog recettes</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Nos produits</a></li>
+                    <li><a href="#" class="hover:underline">Guide d'utilisation</a></li>
+                    <li><a href="#" class="hover:underline">Blog recettes</a></li>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="font-bold">Service client</h4>
                 <ul class="mt-2 space-y-1 text-sm">
-                    <li><a href="#">Livraison</a></li>
-                    <li><a href="#">Retours</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="hover:underline">Livraison</a></li>
+                    <li><a href="#" class="hover:underline">Retours</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
                 </ul>
             </div>
             <div>

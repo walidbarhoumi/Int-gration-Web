@@ -3,6 +3,7 @@
 <head>
     <title>LunchBox Pro - Détail Produit</title>
     <link href="./dist/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="font-sans bg-gray-100">
 
@@ -13,37 +14,57 @@
 
     <!-- Header -->
     <header class="bg-white shadow">
-        <div class="container flex items-center justify-between p-4 mx-auto max-w-[1440px]">
+        <div class="container mx-auto flex justify-between items-center p-4 max-w-[1440px]">
             <div class="text-xl font-bold text-red-500">LunchBox Pro</div>
-            <nav class="space-x-4">
-                <a href="home.html" class="text-gray-700">Accueil</a>
-                <a href="allproducts.html" class="text-gray-700">Produits</a>
-                <a href="#" class="text-gray-700">À propos</a>
-                <a href="#" class="text-gray-700">Contact</a>
-                <a href="#" class="text-gray-700">Connexion</a>
+
+            <!-- Desktop Navbar -->
+            <nav class="hidden space-x-4 md:flex">
+                <a href="home.html" class="text-gray-700 hover:text-red-500">Accueil</a>
+                <a href="allproducts.html" class="text-gray-700 hover:text-red-500">Produits</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">À propos</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Contact</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Connexion</a>
             </nav>
-            
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="text-2xl md:hidden">☰</button>
         </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="flex flex-col hidden p-4 space-y-2 bg-white md:hidden">
+            <a href="home.html" class="text-gray-700">Accueil</a>
+            <a href="allproducts.html" class="text-gray-700">Produits</a>
+            <a href="#" class="text-gray-700">À propos</a>
+            <a href="#" class="text-gray-700">Contact</a>
+            <a href="#" class="text-gray-700">Connexion</a>
+        </nav>
+
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </header>
 
     <!-- Product Detail Section -->
     <div class="container mx-auto max-w-[1440px] py-12 px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Product Image & Thumbnails -->
-        <div class="p-6 bg-white rounded-lg shadow">
-            <!-- Image principale du produit -->
-            <img src="./images/1.jpg" class="mb-4 rounded-lg" alt="LunchBox Pro Smart">
+        <div class="p-4 bg-white rounded-lg shadow md:p-6">
+            <img src="./images/1.jpg" class="w-full rounded-lg" alt="LunchBox Pro Smart">
 
-            <!-- Miniatures des autres images -->
-            <div class="flex space-x-2">
-                <img src="./images/2.jpg" class="w-20 h-20 border rounded-lg cursor-pointer" alt="Thumbnail 1">
-                <img src="./images/3.jpg" class="w-20 h-20 border rounded-lg cursor-pointer" alt="Thumbnail 2">
-                <img src="./images/4.jpg" class="w-20 h-20 border rounded-lg cursor-pointer" alt="Thumbnail 3">
+            <div class="flex flex-wrap gap-2 mt-4">
+                <img src="./images/2.jpg" class="w-16 h-16 border rounded-lg cursor-pointer md:w-20 md:h-20" alt="Thumbnail 1">
+                <img src="./images/3.jpg" class="w-16 h-16 border rounded-lg cursor-pointer md:w-20 md:h-20" alt="Thumbnail 2">
+                <img src="./images/4.jpg" class="w-16 h-16 border rounded-lg cursor-pointer md:w-20 md:h-20" alt="Thumbnail 3">
             </div>
         </div>
 
         <!-- Product Info -->
-        <div class="p-6 bg-white rounded-lg shadow">
-            <h1 class="text-3xl font-bold">LunchBox Pro Smart</h1>
+        <div class="p-4 bg-white rounded-lg shadow md:p-6">
+            <h1 class="text-2xl font-bold md:text-3xl">LunchBox Pro Smart</h1>
             <p class="mt-2 text-xl font-bold text-red-500">129.99 dt</p>
 
             <!-- Features List -->
@@ -92,8 +113,8 @@
                 </div>
             </div>
 
-            <!-- CTA Buttons -->
-            <div class="flex mt-6 space-x-4">
+            <!-- Buttons -->
+            <div class="flex flex-col gap-4 mt-6 md:flex-row">
                 <button class="flex-1 py-2 text-white bg-red-500 rounded">Ajouter au panier</button>
                 <button class="flex-1 py-2 border rounded">Comparer</button>
             </div>
@@ -101,11 +122,11 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-12 mt-12 text-white bg-gray-900">
-        <div class="grid max-w-6xl grid-cols-1 gap-8 mx-auto md:grid-cols-4">
+    <footer class="py-8 text-white bg-gray-900 md:py-12">
+        <div class="grid max-w-6xl grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-4">
             <div>
                 <h4 class="font-bold">À propos de nous</h4>
-                <p class="mt-2 text-sm">LunchBox Pro, votre spécialiste des solutions de repas nomades et innovants depuis 2020.</p>
+                <p class="mt-2 text-sm">LunchBox Pro, votre spécialiste des solutions de repas nomades.</p>
             </div>
             <div>
                 <h4 class="font-bold">Liens utiles</h4>
@@ -128,7 +149,7 @@
                 <h4 class="font-bold">Newsletter</h4>
                 <form class="mt-2">
                     <input type="email" placeholder="Votre e-mail" class="w-full p-2 mb-2 rounded">
-                    <button class="w-full py-2 text-white bg-red-500 rounded">S'inscrire</button>
+                    <button class="w-full py-2 bg-red-500 rounded">S'inscrire</button>
                 </form>
             </div>
         </div>
