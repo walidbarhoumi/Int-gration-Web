@@ -1,7 +1,7 @@
 {
     "scripts": {
-        "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-        "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+        "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch && cp ./src/contact.css ./dist/contact.css && cp ./src/facture.css ./dist/facture.css",
+        "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify && cp ./src/contact.css ./dist/contact.css && cp ./src/facture.css ./dist/facture.css"
     },
     "name": "integration-web",
     "version": "1.0.0",

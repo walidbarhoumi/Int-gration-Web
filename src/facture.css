@@ -1,0 +1,87 @@
+/* Styles spécifiques à la page facture/suivi de commande */
+
+/* Fond de page */
+.facture-bg {
+    background-color: #f3f4f6;
+}
+
+/* Style des étapes de progression */
+.progress-step {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.progress-step-completed {
+    background-color: #3b82f6;
+}
+
+.progress-step-pending {
+    background-color: white;
+    border: 2px solid #d1d5db;
+}
+
+/* Ligne de progression */
+.progress-line {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #d1d5db;
+}
+
+.progress-line-completed {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 75%;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+/* Style des étiquettes d'étape */
+.progress-label {
+    font-size: 14px;
+}
+
+.progress-label-completed {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+.progress-label-pending {
+    color: #6b7280;
+}
+
+/* Style des cartes d'information */
+.info-card {
+    background-color: white;
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/* Style du bouton télécharger */
+.download-button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: #374151;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #f9fafb;
+}
+
+.download-icon {
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+}
