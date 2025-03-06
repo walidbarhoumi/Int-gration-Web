@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - LunchBox Pro</title>
+    <link rel="stylesheet" href="input.css">
+    <script src="config.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-info">
+            <span><i class="fas fa-phone"></i> 01 23 45 67 89</span>
+            <span class="email"><i class="fas fa-envelope"></i> contact@lunchboxpro.fr</span>
+        </div>
+
+        <div class="header-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><span>🍱</span> LunchBox Pro</a>
+
+            <div class="nav-links">
+                <a href="#">Accueil</a>
+                <a href="#">Produits</a>
+                <a href="#">Avantages</a>
+                <a href="#" class="contact">Contact</a>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="notifications-container">
+            <h1>Notifications</h1>
+            
+            <div class="tabs">
+                <button class="tab-btn active">Toutes</button>
+                <button class="tab-btn">Non lues</button>
+                <button class="tab-btn">Commandes</button>
+                <button class="tab-btn">Promotions</button>
+            </div>
+            
+            <div class="mark-all-read">
+                <button class="mark-read-btn">Tout marquer comme lu</button>
+            </div>
+            
+            <div class="notifications-list">
+                <div class="notification-group">
+                    <h3 class="group-title">Aujourd'hui</h3>
+                    
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <span>📦</span>
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Votre commande est en route</h4>
+                            <p>Votre Lunch Box Électrique Pro a été expédiée. Livraison prévue demain.</p>
+                            <div class="notification-time">il y a 2 heures</div>
+                            <div class="notification-actions">
+                                <a href="#" class="action-link">Suivre la livraison</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <span>🏷️</span>
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Promotion exclusive</h4>
+                            <p>-20% sur tous les accessoires pour votre Lunch Box !</p>
+                            <div class="notification-time">il y a 4 heures</div>
+                            <div class="notification-actions">
+                                <a href="#" class="action-link">Voir l'offre</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notification-group">
+                    <h3 class="group-title">Cette semaine</h3>
+                    
+                    <div class="notification-item">
+                        <div class="notification-icon">
+                            <div class="icon-circle">
+                                <span>⭐</span>
+                            </div>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Donnez votre avis</h4>
+                            <p>Comment trouvez-vous votre nouvelle Lunch Box Électrique ?</p>
+                            <div class="notification-time">il y a 3 jours</div>
+                            <div class="notification-actions">
+                                <a href="#" class="action-link">Laisser un avis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- À propos -->
+            <div>
+                <h3>À propos de nous</h3>
+                <p>LunchBox Pro, votre spécialiste des solutions de repas nomades et innovantes depuis 2020.</p>
+            </div>
+
+            <!-- Liens utiles -->
+            <div>
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="#">Nos produits</a></li>
+                    <li><a href="#">Guide d'utilisation</a></li>
+                    <li><a href="#">Blog recettes</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Service client -->
+            <div>
+                <h3>Service client</h3>
+                <ul>
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">Garantie</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos offres exclusives !</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Votre email">
+                    <button>S'inscrire</button>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Commerce, 75001 Paris</p>
+                    <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                    <p><i class="fas fa-envelope"></i> contact@lunchboxpro.fr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
