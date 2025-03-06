@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,3 +11,9 @@
         @apply bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600;
     }
 }
+=======
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> fc8309c (Ajout du projet LunchBox Pro)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "scripts": {
         "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch && cp ./src/contact.css ./dist/contact.css && cp ./src/facture.css ./dist/facture.css",
@@ -14,3 +15,16 @@
         "tailwindcss": "^3.3.3"
     }
 }
+=======
+
+{
+  "name": "lunchboxpro",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.0"
+  }
+}
+>>>>>>> fc8309c (Ajout du projet LunchBox Pro)
