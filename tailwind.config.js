@@ -1,20 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
-    content: ["./**/*.{html,js}"],
-    theme: {
-        extend: {
-            colors: {
-
-            },
-            fontFamily: {
-
-            },
-        },
-    },
-    plugins: [],
-} 
-=======
   content: ["./*.html", "./src/**/*.html"],
   theme: {
     extend: {
@@ -35,4 +20,3 @@ module.exports = {
   },
   plugins: [],
 }
->>>>>>> fc8309c (Ajout du projet LunchBox Pro)
