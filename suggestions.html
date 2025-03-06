@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>LunchBox Pro - Suggestions & Favoris</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Promo Banner -->
+    <div class="p-2 text-sm text-center text-white bg-red-500">
+        Livraison gratuite à partir de 50dt d'achat | Code promo : BIENVENUE10
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center p-4 max-w-[1440px]">
+            <div class="text-xl font-bold text-red-500">LunchBox Pro</div>
+            <nav class="hidden space-x-4 md:flex">
+                <a href="home.html" class="text-gray-700 hover:text-red-500">Accueil</a>
+                <a href="suggestions_favorites.html" class="font-bold text-red-500">Suggestions & Favoris</a>
+                <a href="personaliserproduit.html" class="text-gray-700 hover:text-red-500">Personnaliser</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Contact</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Connexion</a>
+            </nav>
+            <button id="menu-btn" class="text-2xl md:hidden">☰</button>
+        </div>
+        <nav id="mobile-menu" class="flex flex-col hidden p-4 space-y-2 bg-white md:hidden">
+            <a href="home.html" class="text-gray-700">Accueil</a>
+            <a href="suggestions_favorites.html" class="font-bold text-red-500">Suggestions & Favoris</a>
+            <a href="personaliserproduit.html" class="text-gray-700">Personnaliser</a>
+            <a href="#" class="text-gray-700">Contact</a>
+            <a href="#" class="text-gray-700">Connexion</a>
+        </nav>
+        <script>
+            document.getElementById('menu-btn').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-8 text-center md:py-12 bg-gradient-to-r from-yellow-200 to-orange-200">
+        <h1 class="text-2xl font-bold text-gray-800 md:text-4xl">Vos Suggestions et Favoris</h1>
+        <p class="mt-2 text-gray-600">Retrouvez vos produits préférés et nos meilleures recommandations</p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container mx-auto max-w-[1440px] py-6 md:py-12 px-4 grid gap-6">
+        
+        <!-- Suggestions Section -->
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold text-gray-800">Suggestions pour vous</h2>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-4">
+                <div class="p-4 bg-gray-100 rounded-lg">
+                    <img src="./images/6.jpg" class="object-cover w-full h-40 rounded" alt="LunchBox Premium">
+                    <h3 class="mt-4 text-lg font-bold">LunchBox Premium</h3>
+                    <p class="font-bold text-red-500">59.99 dt</p>
+                </div>
+                <div class="p-4 bg-gray-100 rounded-lg">
+                    <img src="./images/5.jpg" class="object-cover w-full h-40 rounded" alt="LunchBox Pro XL">
+                    <h3 class="mt-4 text-lg font-bold">LunchBox Pro XL</h3>
+                    <p class="font-bold text-red-500">69.99 dt</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorites Section -->
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold text-gray-800">Vos Favoris</h2>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 mt-4">
+                <div class="p-4 bg-gray-100 rounded-lg">
+                    <img src="./images/4.jpg" class="object-cover w-full h-40 rounded" alt="LunchBox Classic">
+                    <h3 class="mt-4 text-lg font-bold">LunchBox Classic</h3>
+                    <p class="font-bold text-red-500">49.99 dt</p>
+                </div>
+                <div class="p-4 bg-gray-100 rounded-lg">
+                    <img src="./images/3.jpg" class="object-cover w-full h-40 rounded" alt="LunchBox Eco-Friendly">
+                    <h3 class="mt-4 text-lg font-bold">LunchBox Eco-Friendly</h3>
+                    <p class="font-bold text-red-500">44.99 dt</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 text-white bg-gray-900 md:py-12">
+        <div class="grid max-w-6xl grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-4">
+            <div>
+                <h4 class="font-bold">À propos de nous</h4>
+                <p class="mt-2 text-sm">LunchBox Pro, votre spécialiste des solutions de repas nomades.</p>
+            </div>
+            <div>
+                <h4 class="font-bold">Liens utiles</h4>
+                <ul class="mt-2 space-y-1 text-sm">
+                    <li><a href="#" class="hover:underline">Nos produits</a></li>
+                    <li><a href="#" class="hover:underline">Guide d'utilisation</a></li>
+                    <li><a href="#" class="hover:underline">Blog recettes</a></li>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Service client</h4>
+                <ul class="mt-2 space-y-1 text-sm">
+                    <li><a href="#" class="hover:underline">Livraison</a></li>
+                    <li><a href="#" class="hover:underline">Retours</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Newsletter</h4>
+                <form class="mt-2">
+                    <input type="email" placeholder="Votre e-mail" class="w-full p-2 mb-2 rounded">
+                    <button class="w-full py-2 text-white bg-red-500 rounded">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+        <p class="mt-8 text-xs text-center">&copy; 2025 LunchBox Pro. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

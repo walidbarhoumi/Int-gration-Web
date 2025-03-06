@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunchBox Pro - Accessoires pour boîtes repas</title>
+    <link rel="stylesheet" href="input.css">
+    <script src="config.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-info">
+            <span><i class="fas fa-phone"></i> 01 23 45 67 89</span>
+            <span class="email"><i class="fas fa-envelope"></i> contact@lunchboxpro.fr</span>
+        </div>
+
+        <div class="header-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><span>🍱</span> LunchBox Pro</a>
+
+            <div class="nav-links">
+                <a href="#">Accueil</a>
+                <a href="#">Produits</a>
+                <a href="#">Avantages</a>
+                <a href="#" class="contact">Contact</a>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Accessoires recommandés</h1>
+            <p>Optimisez votre expérience avec ces accessoires essentiels</p>
+        </section>
+
+        <section class="products">
+            <div class="carousel">
+                <button class="carousel-btn prev">&larr;</button>
+                
+                <div class="product-container">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image1.png" alt="Set de couverts nomades">
+                        </div>
+                        <h3>Set de couverts nomades</h3>
+                        <p>Un set complet de couverts réutilisables incluant couteau, cuillère et sets de baguettes. Une solution compacte et hygiénique.</p>
+                        <div class="price">14,99 €</div>
+                        <button class="add-to-cart">Ajouter au pack</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image2.png" alt="Pochette isotherme">
+                        </div>
+                        <h3>Pochette isotherme</h3>
+                        <p>Pochette isotherme en matériau résistant et doublure thermique. Conserve vos repas chauds ou froids pendant plusieurs heures. Facile à transporter.</p>
+                        <div class="price">19,99 €</div>
+                        <button class="add-to-cart">Ajouter au pack</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image3.png" alt="Pack de séparateurs">
+                        </div>
+                        <h3>Pack de séparateurs</h3>
+                        <p>Lot de 3 séparateurs amovibles et ajustables en silicone alimentaire, idéals pour compartimenter votre repas et éviter le mélange des odeurs dans votre lunch box.</p>
+                        <div class="price">9,99 €</div>
+                        <button class="add-to-cart">Ajouter au pack</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/image4.png" alt="Sangle de transport">
+                        </div>
+                        <h3>Sangle de transport</h3>
+                        <p>Sangle élastique résistante avec fermeture antidérapante permettant de sécuriser votre lunch box pendant le transport. Compatible avec différents formats.</p>
+                        <div class="price">7,99 €</div>
+                        <button class="add-to-cart">Ajouter au pack</button>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn next">&rarr;</button>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- À propos -->
+                <div>
+                    <h3>À propos de nous</h3>
+                    <p>LunchBox Pro, votre spécialiste des solutions de repas nomades et innovantes depuis 2020.</p>
+                </div>
+    
+                <!-- Liens utiles -->
+                <div>
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="#">Nos produits</a></li>
+                        <li><a href="#">Guide d'utilisation</a></li>
+                        <li><a href="#">Blog recettes</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Service client -->
+                <div>
+                    <h3>Service client</h3>
+                    <ul>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">Garantie</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Newsletter -->
+                <div>
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous pour recevoir nos offres exclusives !</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Votre email">
+                        <button>S'inscrire</button>
+                    </div>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue du Commerce, 75001 Paris</p>
+                        <p><i class="fas fa-phone"></i> 01 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@lunchboxpro.fr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

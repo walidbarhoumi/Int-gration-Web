@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>LunchBox Pro - Détail Produit</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Promo Banner -->
+    <div class="p-2 text-sm text-center text-white bg-red-500">
+        Livraison gratuite à partir de 50dt d'achat | Code promo : BIENVENUE10
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center p-4 max-w-[1440px]">
+            <div class="text-xl font-bold text-red-500">LunchBox Pro</div>
+
+            <!-- Desktop Navbar -->
+            <nav class="hidden space-x-4 md:flex">
+                <a href="home.html" class="text-gray-700 hover:text-red-500">Accueil</a>
+                <a href="allproducts.html" class="text-gray-700 hover:text-red-500">Produits</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">À propos</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Contact</a>
+                <a href="#" class="text-gray-700 hover:text-red-500">Connexion</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="text-2xl md:hidden">☰</button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="flex flex-col hidden p-4 space-y-2 bg-white md:hidden">
+            <a href="home.html" class="text-gray-700">Accueil</a>
+            <a href="allproducts.html" class="text-gray-700">Produits</a>
+            <a href="#" class="text-gray-700">À propos</a>
+            <a href="#" class="text-gray-700">Contact</a>
+            <a href="#" class="text-gray-700">Connexion</a>
+        </nav>
+
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <!-- Product Detail Section -->
+    <div class="container mx-auto max-w-[1440px] py-12 px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Product Image & Thumbnails -->
+        <div class="p-4 bg-white rounded-lg shadow md:p-6">
+            <img src="./images/1.jpg" class="w-full rounded-lg" alt="LunchBox Pro Smart">
+
+            <div class="flex flex-wrap gap-2 mt-4">
+                <img src="./images/2.jpg" class="w-16 h-16 border rounded-lg cursor-pointer md:w-20 md:h-20" alt="Thumbnail 1">
+                <img src="./images/3.jpg" class="w-16 h-16 border rounded-lg cursor-pointer md:w-20 md:h-20" alt="Thumbnail 2">
+                <img src="./images/4.jpg" class="w-16 h-16 border rounded-lg cursor-pointer md:w-20 md:h-20" alt="Thumbnail 3">
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="p-4 bg-white rounded-lg shadow md:p-6">
+            <h1 class="text-2xl font-bold md:text-3xl">LunchBox Pro Smart</h1>
+            <p class="mt-2 text-xl font-bold text-red-500">129.99 dt</p>
+
+            <!-- Features List -->
+            <div class="mt-6 space-y-4">
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <p class="font-semibold text-blue-600">✔️ Cuisson et chauffage intelligent</p>
+                    <p class="text-sm text-gray-600">Maintient vos repas chauds à la température parfaite.</p>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <p class="font-semibold text-blue-600">✔️ Batterie longue durée</p>
+                    <p class="text-sm text-gray-600">Jusqu’à 3 heures d’autonomie pour vos repas partout.</p>
+                </div>
+                <div class="p-4 bg-blue-100 rounded-lg">
+                    <p class="font-semibold text-blue-600">✔️ Compartiment amovible</p>
+                    <p class="text-sm text-gray-600">Facile à nettoyer et parfait pour séparer vos aliments.</p>
+                </div>
+            </div>
+
+            <!-- Available Colors -->
+            <h2 class="mt-6 font-bold">Couleurs disponibles</h2>
+            <div class="flex mt-2 space-x-2">
+                <div class="w-6 h-6 bg-red-500 rounded-full cursor-pointer"></div>
+                <div class="w-6 h-6 bg-blue-500 rounded-full cursor-pointer"></div>
+                <div class="w-6 h-6 bg-green-500 rounded-full cursor-pointer"></div>
+                <div class="w-6 h-6 bg-black rounded-full cursor-pointer"></div>
+            </div>
+
+            <!-- Technical Specs -->
+            <h2 class="mt-6 font-bold">Spécifications techniques</h2>
+            <div class="grid grid-cols-2 gap-4 mt-2 text-sm">
+                <div>
+                    <p class="font-semibold">Dimensions</p>
+                    <p>25 x 18 x 16 cm</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Capacité</p>
+                    <p>1.2 L</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Poids</p>
+                    <p>800g</p>
+                </div>
+                <div>
+                    <p class="font-semibold">Matériau</p>
+                    <p>Acier Inoxydable</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col gap-4 mt-6 md:flex-row">
+                <button class="flex-1 py-2 text-white bg-red-500 rounded">Ajouter au panier</button>
+                <button class="flex-1 py-2 border rounded">Comparer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 text-white bg-gray-900 md:py-12">
+        <div class="grid max-w-6xl grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-4">
+            <div>
+                <h4 class="font-bold">À propos de nous</h4>
+                <p class="mt-2 text-sm">LunchBox Pro, votre spécialiste des solutions de repas nomades.</p>
+            </div>
+            <div>
+                <h4 class="font-bold">Liens utiles</h4>
+                <ul class="mt-2 space-y-1 text-sm">
+                    <li><a href="#">Nos produits</a></li>
+                    <li><a href="#">Guide d'utilisation</a></li>
+                    <li><a href="#">Blog recettes</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Service client</h4>
+                <ul class="mt-2 space-y-1 text-sm">
+                    <li><a href="#">Livraison</a></li>
+                    <li><a href="#">Retours</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Newsletter</h4>
+                <form class="mt-2">
+                    <input type="email" placeholder="Votre e-mail" class="w-full p-2 mb-2 rounded">
+                    <button class="w-full py-2 bg-red-500 rounded">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+        <p class="mt-8 text-xs text-center">&copy; 2025 LunchBox Pro. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

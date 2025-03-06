@@ -7,9 +7,10 @@
     <title>Contact - LunchBox Pro</title>
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./src/facture.css">
 </head>
 
-<body class="bg-gray-150 font-sans">
+<body class="facture-bg font-sans">
     <!-- En-tête -->
     <header class="py-2 px-4 flex justify-between items-center bg-white border-b border-gray-100">
         <div class="flex items-center space-x-2">
@@ -57,33 +58,33 @@
         <div class="flex justify-between items-center mb-10 relative">
             <!-- Cercles de progression -->
             <div class="relative z-10 flex items-center justify-center">
-                <div class="w-5 h-5 rounded-full bg-blue-500"></div>
+                <div class="progress-step progress-step-completed"></div>
             </div>
             <div class="relative z-10 flex items-center justify-center">
-                <div class="w-5 h-5 rounded-full bg-blue-500"></div>
+                <div class="progress-step progress-step-pending"></div>
             </div>
             <div class="relative z-10 flex items-center justify-center">
-                <div class="w-5 h-5 rounded-full bg-blue-500"></div>
+                <div class="progress-step progress-step-pending"></div>
             </div>
             <div class="relative z-10 flex items-center justify-center">
-                <div class="w-5 h-5 rounded-full bg-white border-2 border-gray-300"></div>
+                <div class="progress-step progress-step-pending"></div>
             </div>
 
             <!-- Ligne de progression -->
-            <div class="absolute top-2.5 left-0 right-0 h-0.5 bg-gray-300"></div>
-            <div class="absolute top-2.5 left-0 w-3/4 h-0.5 bg-blue-500"></div>
+            <div class="progress-line"></div>
+            <div class="progress-line-completed"></div>
         </div>
 
         <!-- Étiquettes de progression -->
         <div class="flex justify-between mb-10 -mt-6 px-2">
-            <div class="text-center text-blue-500 text-sm font-medium">Commande validée</div>
-            <div class="text-center text-blue-500 text-sm font-medium">En préparation</div>
-            <div class="text-center text-blue-500 text-sm font-medium">Expédiée</div>
-            <div class="text-center text-gray-500 text-sm">Livrée</div>
+            <div class="text-center progress-label progress-label-completed">Commande validée</div>
+            <div class="text-center progress-label progress-label-pending">En préparation</div>
+            <div class="text-center progress-label progress-label-pending">Expédiée</div>
+            <div class="text-center progress-label progress-label-pending">Livrée</div>
         </div>
 
         <!-- Détails de la commande -->
-        <div class="bg-white rounded p-4 mb-4">
+        <div class="info-card">
             <h2 class="text-lg font-bold mb-3">Détails de la commande</h2>
             <div class="grid grid-cols-2 gap-y-2 text-sm">
                 <div class="text-gray-600">Date de commande</div>
@@ -98,13 +99,13 @@
         </div>
 
         <!-- Adresse de livraison -->
-        <div class="bg-white rounded p-4 mb-4">
+        <div class="info-card">
             <h2 class="text-lg font-bold mb-3">Adresse de livraison</h2>
             <p class="text-sm">Ariana, esprit</p>
         </div>
 
         <!-- Récapitulatif -->
-        <div class="bg-white rounded p-4 mb-8">
+        <div class="info-card">
             <h2 class="text-lg font-bold mb-3">Récapitulatif</h2>
 
             <div class="mb-3 pb-3 border-b border-gray-200">
@@ -130,10 +131,9 @@
 
         <!-- Bouton de téléchargement -->
         <div class="flex justify-end">
-            <button
-                class="flex items-center bg-white text-gray-800 text-sm py-2 px-4 rounded border border-gray-300 hover:bg-gray-50">
+            <button class="download-button">
                 Télécharger la facture
-                <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <svg class="download-icon ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd"
                         d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
                         clip-rule="evenodd"></path>

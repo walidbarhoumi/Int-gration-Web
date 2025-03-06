@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>LunchBox Pro - Personnaliser votre produit</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Promo Banner -->
+    <div class="p-2 text-sm text-center text-white bg-red-500">
+        Livraison gratuite à partir de 50dt d'achat | Code promo : BIENVENUE10
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center p-4 max-w-[1440px]">
+            <div class="text-xl font-bold text-red-500">LunchBox Pro</div>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden space-x-4 md:flex">
+                <a href="home.html" class="text-gray-700">Accueil</a>
+                <a href="allproducts.html" class="text-gray-700">Suggestions & Favoris
+                    
+                </a>
+                <a href="personaliserproduit.html" class="font-bold text-red-500">Personnaliser</a>
+                <a href="#" class="text-gray-700">Contact</a>
+                <a href="#" class="text-gray-700">Connexion</a>
+            </nav>
+
+            <!-- Menu Burger (Mobile) -->
+            <button id="menu-btn" class="text-2xl md:hidden">☰</button>
+        </div>
+
+        <!-- Menu Mobile (hidden by default) -->
+        <nav id="mobile-menu" class="flex flex-col hidden p-4 space-y-2 bg-white md:hidden">
+            <a href="home.html" class="text-gray-700">Accueil</a>
+            <a href="allproducts.html" class="text-gray-700">Produit</a>
+            <a href="personaliserproduit.html" class="font-bold text-red-500">Personnaliser</a>
+            <a href="#" class="text-gray-700">Contact</a>
+            <a href="#" class="text-gray-700">Connexion</a>
+        </nav>
+
+        <script>
+            document.getElementById('menu-btn').addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            });
+        </script>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto max-w-[1440px] py-8 md:py-12 px-4 grid grid-cols-1 md:grid-cols-12 gap-6">
+
+        <!-- Left: Product Image & Features -->
+        <div class="p-6 bg-white rounded-lg shadow md:col-span-8">
+            <img src="./images/1.jpg" class="w-full rounded-lg" alt="LunchBox Personnalisée">
+            
+            <!-- Feature Icons (stacked on mobile, 3 columns on desktop) -->
+            <div class="grid grid-cols-1 gap-4 mt-6 sm:grid-cols-3">
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-50">
+                    <img src="./images/battery.png" class="w-12 h-12 mb-2" alt="Autonomie 12h">
+                    <p class="font-bold text-gray-800">Autonomie 12h</p>
+                    <p class="text-sm text-gray-600">Batterie longue durée</p>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-50">
+                    <img src="./images/smartphone.png" class="w-12 h-12 mb-2" alt="Contrôle Smart">
+                    <p class="font-bold text-gray-800">Contrôle Smart</p>
+                    <p class="text-sm text-gray-600">Application dédiée</p>
+                </div>
+                <div class="flex flex-col items-center p-4 rounded-lg bg-gray-50">
+                    <img src="./images/thermometer.png" class="w-12 h-12 mb-2" alt="Température réglable">
+                    <p class="font-bold text-gray-800">Temp. Réglable</p>
+                    <p class="text-sm text-gray-600">20°C à 75°C</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Customization Options -->
+        <div class="p-6 bg-white rounded-lg shadow md:col-span-4">
+            <h2 class="mb-6 text-2xl font-bold">Personnalisez votre LunchBox</h2>
+
+            <h3 class="font-bold">Couleur</h3>
+            <div class="flex mt-2 space-x-2">
+                <div class="w-6 h-6 bg-red-500 rounded-full cursor-pointer"></div>
+                <div class="w-6 h-6 bg-green-500 rounded-full cursor-pointer"></div>
+                <div class="w-6 h-6 bg-blue-500 rounded-full cursor-pointer"></div>
+                <div class="w-6 h-6 bg-yellow-500 rounded-full cursor-pointer"></div>
+                <div class="w-6 h-6 bg-gray-500 rounded-full cursor-pointer"></div>
+            </div>
+
+            <h3 class="mt-6 font-bold">Capacité</h3>
+            <div class="flex mt-2 space-x-4">
+                <button class="px-4 py-2 border rounded">1.0L</button>
+                <button class="px-4 py-2 text-white bg-red-500 border rounded">1.5L</button>
+                <button class="px-4 py-2 border rounded">2.0L</button>
+            </div>
+
+            <h3 class="mt-6 font-bold">Options</h3>
+            <div class="mt-2 space-y-2">
+                <button class="w-full py-2 text-white bg-green-500 rounded">✔️ Contrôle WiFi</button>
+                <button class="w-full py-2 border rounded">Kit couverts premium</button>
+                <button class="w-full py-2 border rounded">Protection antichoc</button>
+            </div>
+
+            <p class="mt-6 text-2xl font-bold text-red-500">89.99 dt</p>
+            <button class="w-full py-3 mt-4 text-white bg-blue-500 rounded">Ajouter au panier</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 text-white bg-gray-900 md:py-12">
+        <div class="grid max-w-6xl grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-4">
+            <div>
+                <h4 class="font-bold">À propos de nous</h4>
+                <p class="mt-2 text-sm">LunchBox Pro, votre spécialiste des solutions de repas nomades et innovants depuis 2020.</p>
+            </div>
+            <div>
+                <h4 class="font-bold">Liens utiles</h4>
+                <ul class="mt-2 space-y-1 text-sm">
+                    <li><a href="home.html" class="hover:underline">Accueil</a></li>
+                    <li><a href="allproducts.html" class="hover:underline">Nos produits</a></li>
+                    <li><a href="#" class="hover:underline">Guide d'utilisation</a></li>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Service client</h4>
+                <ul class="mt-2 space-y-1 text-sm">
+                    <li><a href="#" class="hover:underline">Livraison</a></li>
+                    <li><a href="#" class="hover:underline">Retours</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold">Newsletter</h4>
+                <form class="mt-2">
+                    <input type="email" placeholder="Votre e-mail" class="w-full p-2 mb-2 rounded">
+                    <button class="w-full py-2 text-white bg-red-500 rounded">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
